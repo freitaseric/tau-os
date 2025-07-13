@@ -1,0 +1,25 @@
+---
+export const prerender = true;
+
+import type { GetStaticPaths } from "astro";
+import { getCollection } from "astro:content";
+import PostLayout from "../../../layouts/PostLayout.astro";
+import { similerItems, sortByDate } from "../../../lib/blogUtils";
+
+export const getStaticPaths = (async () => {
+  const posts = (await getCollection("blog")).sort(sortByDate);
+  const paths = posts.map((post) => ({
+    params: {
+      post: post.id,
+    },
+    props: { post, posts },
+  }));
+
+  return paths;
+}) satisfies GetStaticPaths;
+
+const { post, posts } = Astro.props;
+const relatedPosts = similerItems(post, posts, post.id);
+---
+
+<PostLayout post={post} relatedPosts={relatedPosts} />

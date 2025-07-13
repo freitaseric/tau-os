@@ -1,0 +1,9 @@
+@import "tailwindcss";
+@plugin "daisyui" {
+   themes: corporate --default, forest --prefersdark;
+}
+
+@theme {
+  --color-gradient-start: #9e6bff;
+  --color-gradient-end: #9fc1ff;
+}

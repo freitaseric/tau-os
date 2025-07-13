@@ -1,0 +1,37 @@
+---
+import type { CollectionEntry } from "astro:content";
+import { getPath } from "../lib/blogUtils";
+
+interface Props {
+  post: CollectionEntry<"blog">;
+}
+
+const { post } = Astro.props;
+---
+
+<div
+  class={`card bg-base-200 text-base-content w-96 shadow-sm ${post.data.image && "image-full"}`}
+>
+  {
+    post.data.image && (
+      <figure>
+        <img src={post.data.image} alt="Post image" />
+      </figure>
+    )
+  }
+  <div class="card-body">
+    <h2 class="card-title">{post.data.title}</h2>
+    <p>
+      {post.data.description}
+    </p>
+    <div class="card-actions justify-end">
+      <a
+        class="btn btn-soft btn-secondary"
+        href={getPath(post.id, post.filePath)}
+        target="_parent"
+      >
+        Read</a
+      >
+    </div>
+  </div>
+</div>

@@ -1,0 +1,35 @@
+---
+import { render, type CollectionEntry } from "astro:content";
+import TableOfContents from "../components/TableOfContents.astro";
+import config from "../config";
+import BaseLayout from "./BaseLayout.astro";
+
+interface Props {
+  title?: string;
+  post: CollectionEntry<"blog">;
+  relatedPosts: CollectionEntry<"blog">[];
+}
+
+const { title, post, relatedPosts } = Astro.props;
+
+const { Content, headings } = await render(post);
+---
+
+<BaseLayout title={title ?? config.rss.title}>
+  <article>
+    <Content />
+  </article>
+  <div
+    class="hidden max-h-static_sidemenu sticky top-[5rem] pl-4 md:flex md:col-3"
+  >
+    <TableOfContents {headings} />
+  </div>
+  {
+    relatedPosts.map((relatedPost) => (
+      <div>
+        <h1>{relatedPost.data.title}</h1>
+        <p>{relatedPost.data.description}</p>
+      </div>
+    ))
+  }
+</BaseLayout>

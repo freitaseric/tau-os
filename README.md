@@ -1,47 +1,25 @@
-# Astro Starter Kit: Minimal
+# Dossiê Linux Distro
 
-```sh
-bun create astro@latest -- --template minimal
-```
+Este repositório contém um dossiê completo sobre o desenvolvimento de distribuições Linux personalizadas, transformado em um site interativo. O site explora os motivos para criar uma distro, seus benefícios e desvantagens, um guia passo a passo detalhado e dicas para otimizar o processo.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/minimal)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/minimal)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/minimal/devcontainer.json)
+## 🚀 Tecnologias Utilizadas
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+* Tailwind CSS: Framework CSS utilitário para estilização rápida e responsiva.
+* DaisyUI: Component library para Tailwind CSS, facilitando a criação de componentes UI bonitos e funcionais.
 
-## 🚀 Project Structure
+## ✨ Funcionalidades
 
-Inside of your Astro project, you'll see the following folders and files:
+* Conteúdo Abrangente: Dossiê detalhado sobre o desenvolvimento de distribuições Linux.
+* Design Responsivo: O site se adapta a diferentes tamanhos de tela (desktop, tablet, mobile).
+* Tema Claro/Escuro: Alternância de tema para melhor experiência visual.
+* Navegação Clara: Seções bem definidas para fácil leitura.
 
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+## 🤝 Contribuição
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+Contribuições são bem-vindas! Se você tiver sugestões, melhorias ou encontrar algum problema, sinta-se à vontade para abrir uma issue ou enviar um pull request.
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+## 📝 Licença
 
-Any static assets, like images, can be placed in the `public/` directory.
+Este projeto está licenciado sob a Licença MIT. Veja o arquivo LICENSE para mais detalhes.
 
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `bun install`             | Installs dependencies                            |
-| `bun dev`             | Starts local dev server at `localhost:4321`      |
-| `bun build`           | Build your production site to `./dist/`          |
-| `bun preview`         | Preview your build locally, before deploying     |
-| `bun astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `bun astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+> Desenvolvido com ❤️ e conhecimento Linux.

@@ -1,0 +1,71 @@
+---
+import { Icon } from "astro-icon/components";
+
+const { pathname } = Astro.url;
+
+const menu = [
+  {
+    name: "Home",
+    url: "/",
+  },
+  {
+    name: "Blog",
+    url: "/blog",
+  },
+];
+---
+
+<header
+  transition:persist
+  class="navbar bg-base-200 text-base-content shadow-sm rounded-2xl sticky top-0 w-[97%] place-self-center-safe px-6 mt-2 mb-6"
+>
+  <div class="navbar-start">
+    <a class="btn btn-ghost text-xl">TauOS</a>
+  </div>
+  <div class="navbar-end">
+    <ul class="menu menu-horizontal px-1 hidden lg:flex">
+      {
+        menu.map((item) => (
+          <li>
+            <a
+              href={item.url}
+              class:list={[
+                "link link-hover font-semibold",
+                (pathname === item.url || pathname === `${item.url}/`) &&
+                  "link-primary",
+              ]}
+            >
+              {item.name}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+    <div class="dropdown">
+      <button tabindex="0" class="btn btn-ghost lg:hidden">
+        <Icon name="mdi:menu" />
+      </button>
+      <ul
+        tabindex="0"
+        class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
+      >
+        {
+          menu.map((item) => (
+            <li>
+              <a
+                href={item.url}
+                class:list={[
+                  "link link-hover font-semibold",
+                  (pathname === item.url || pathname === `${item.url}/`) &&
+                    "link-primary",
+                ]}
+              >
+                {item.name}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </div>
+</header>

@@ -1,0 +1,10 @@
+---
+import type { GetStaticPaths } from "astro";
+import { getEntries } from "astro:content";
+import { sortByDate } from "../../lib/sortByDate";
+
+export const getStaticPaths = (async () => {
+  const entries = (await getEntries("blog")).filter(sortByDate);
+  return [];
+}) satisfies GetStaticPaths;
+---

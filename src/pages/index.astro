@@ -1,16 +1,19 @@
 ---
-
+import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout title="TauOS | Home">
+  <main class="flex flex-col justify-start items-center gap-4">
+    <section class="h-[85vh] flex flex-col items-center gap-8">
+      <div class="skeleton size-64 rounded-2xl"></div>
+      <div class="flex flex-col justify-center items-center">
+        <h2 class="text-2xl font-semibold">Welcome to,</h2>
+        <h1
+          class="text-3xl font-bold bg-gradient-to-r from-gradient-start to-gradient-end bg-clip-text text-transparent"
+        >
+          TauOS
+        </h1>
+      </div>
+    </section>
+  </main>
+</BaseLayout>

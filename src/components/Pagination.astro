@@ -1,0 +1,45 @@
+---
+interface Props {
+  collection?: string;
+  pageIndex: number;
+  pageCount: number;
+}
+
+const { collection, pageIndex, pageCount } = Astro.props;
+
+let pageList: number[] = [];
+for (let i = 1; i <= pageCount; i++) {
+  pageList.push(i);
+}
+
+const prevPage =
+  pageIndex === 2
+    ? `${collection ? "/" + collection : "/"}`
+    : pageIndex > 2
+      ? `${collection ? "/" + collection : ""}/${pageIndex - 1}`
+      : null;
+const nextPage =
+  pageIndex < pageCount
+    ? `${collection ? "/" + collection : ""}/${pageIndex + 1}`
+    : null;
+---
+
+<div class="flex flex-col items-center" transition:animate="none">
+  <div class="join">
+    {
+      prevPage && (
+        <a class="join-item btn btn-outline" href={prevPage}>
+          «
+        </a>
+      )
+    }
+    <button class="join-item btn btn-outline">{pageIndex}</button>
+    {
+      nextPage && (
+        <a class="join-item btn btn-outline" href={nextPage}>
+          »
+        </a>
+      )
+    }
+  </div>
+</div>
