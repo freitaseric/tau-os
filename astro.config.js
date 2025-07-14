@@ -17,6 +17,5 @@ export default defineConfig({
   integrations: [sitemap(), icon()],
   adapter: vercel({
     isr: true,
-    edgeMiddleware: true,
   }),
 })
