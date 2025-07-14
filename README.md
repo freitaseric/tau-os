@@ -1,25 +1,37 @@
-# Dossiê Linux Distro
+<!-- omit in toc -->
+# TauOS
 
-Este repositório contém um dossiê completo sobre o desenvolvimento de distribuições Linux personalizadas, transformado em um site interativo. O site explora os motivos para criar uma distro, seus benefícios e desvantagens, um guia passo a passo detalhado e dicas para otimizar o processo.
+  A linux distrubution made by a technology enthusiast just for study how linux works.
 
-## 🚀 Tecnologias Utilizadas
+<!-- omit in toc -->
+## Table Of Contents
 
-* Tailwind CSS: Framework CSS utilitário para estilização rápida e responsiva.
-* DaisyUI: Component library para Tailwind CSS, facilitando a criação de componentes UI bonitos e funcionais.
+- [About the project](#about-the-project)
+- [Screenshots](#screenshots)
+- [Installation](#installation)
+- [Licensing](#licensing)
+- [Contributors](#contributors)
 
-## ✨ Funcionalidades
+## About the project
 
-* Conteúdo Abrangente: Dossiê detalhado sobre o desenvolvimento de distribuições Linux.
-* Design Responsivo: O site se adapta a diferentes tamanhos de tela (desktop, tablet, mobile).
-* Tema Claro/Escuro: Alternância de tema para melhor experiência visual.
-* Navegação Clara: Seções bem definidas para fácil leitura.
+**TauOS** is a linux distribution made in Brazil by [Eric Freitas](https://freitaseric.com), a enthusiast with desire of knowledge.
 
-## 🤝 Contribuição
+This project was born from the desire to learn how linux works in practice, thus becoming a linux distribution like any other.
 
-Contribuições são bem-vindas! Se você tiver sugestões, melhorias ou encontrar algum problema, sinta-se à vontade para abrir uma issue ou enviar um pull request.
+## Screenshots
 
-## 📝 Licença
+> [!NOTE]
+> They'll be taken out later.
 
-Este projeto está licenciado sob a Licença MIT. Veja o arquivo LICENSE para mais detalhes.
+## Installation
 
-> Desenvolvido com ❤️ e conhecimento Linux.
+> [!WARNING]
+> **TauOS** is in development, you may want to follow the development by the blog.
+
+## Licensing
+
+This project is MIT-licensed, check the fike [LICENSE](./LICENSE) to more.
+
+## Contributors
+
+- [@freitaseric](https://freitaseric.com)
