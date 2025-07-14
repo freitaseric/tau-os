@@ -15,7 +15,5 @@ export default defineConfig({
     plugins: [tailwindcss()],
   },
   integrations: [sitemap(), icon()],
-  adapter: vercel({
-    isr: true,
-  }),
+  adapter: vercel(),
 })
